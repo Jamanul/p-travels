@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P-Travels</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/2f8c3d8d27.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="font-inter">
+    <header class="mx-36">
+        <section>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="flex max-w-xl justify-between">
+                        <a
+                            class="block lg:hidden btn border px-7 py-4 text-green-700 bg-[#1DD10066] border-green-500 rounded-xl">BUS
+                            <i class="fa-solid fa-van-shuttle"></i></a>
+                        <a class="btn btn-ghost text-3xl font-bold">P-Ticket</a>
+                    </div>
+
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>HOME</a></li>
+                        <li><a>ABOUT</a></li>
+                        <li><a>DESTINATION</a></li>
+                        <li><a>SEARCH</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end hidden lg:flex">
+                    <a class="btn border px-7 py-4 text-green-700 bg-[#1DD10066] border-green-500 rounded-xl">BUS <i
+                            class="fa-solid fa-van-shuttle"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="mb-64">
+            <div
+                class="rounded-[32px] bg-[url('/images/banner.png')] bg-no-repeat bg-cover text-center pt-[100px] pb-36 px-56 space-y-8">
+                <h1 class="text-6xl text-white font-extrabold">End-to-End Travel with <br>
+                    <span class="text-[#1DD100]"> P Travels</span>
+                </h1>
+                <p class="font-normal text-xl text-white">Yes, you can run unit tests and view the results directly
+                    within the app. The <br> integrated testing features allow for a streamlined .</p>
+                <button class="btn px-8 font-bold text-xl text-black bg-[#1DD100] border-none">Buy Tickets</button>
+            </div>
+            <div>
+                <div class="relative grid-cols-3 grid">
+                    <div class="absolute bottom-[-75px] left-[250px] flex rounded-3xl w-[308px] bg-white border-b-4 border-b-[#1DD100]">
+                        <div class="pl-8 py-8"><img src="images/people.png" alt=""></div>
+                        <div class="pr-8 py-8">
+                            <p class="font-bold text-4xl">500K+</p>
+                            <p class="font-normal text-lg text-[#03071299]">Registered users</p>
+                        </div>
+                    </div>
+                    <div class=" absolute bottom-[-75px] left-[650px] flex rounded-3xl w-[308px] bg-white border-b-4 border-b-[#1DD100]">
+                        <div class="pl-8 py-8"><img src="images/ticket-cupon.png" alt=""></div>
+                        <div class="pr-8 py-8">
+                            <p class="font-bold text-4xl">1.7 lacks</p>
+                            <p class="font-normal text-lg text-[#03071299]">Tickets sold</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-[-75px] left-[1050px] flex rounded-3xl w-[308px] bg-white border-b-4 border-b-[#1DD100]">
+                        <div class="pl-8 py-8"><img src="images/people.png" alt=""></div>
+                        <div class="pr-8 py-8">
+                            <p class="font-bold text-4xl">80K+</p>
+                            <p class="font-normal text-lg text-[#03071299]">Rental partners</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="text-center">
+            <div>
+                <h1 class="font-bold text-4xl text-center mb-12">Best offers for you</h1>
+            </div>
+            <div class="grid grid-cols-2 gap-6 mb-16">
+                <div class="rounded-3xl bg-[#FFBF0F] flex">
+                   <div class="flex-1 p-14 border-r-4 border-dashed">
+                    <h1 class="text-4xl font-extrabold">15% OFF</h1>
+                    <p class="text-xl font-semibold">on your next purchase</p>
+                    <p class="text-[rgba(3, 7, 18, 0.50)] font-medium text-lg">use by January 2024</p>
+                   </div>
+                   <div class="flex-1 p-16">
+                    <h3 class="text-3xl font-bold">NEW15</h3>
+                    <p class="font-medium text-xl text-[rgba(3, 7, 18, 0.40)]">Coupon Code</p>
+                   </div> 
+                </div>
+                <div class="rounded-3xl bg-[#F78C9C] flex">
+                   <div class="flex-1 p-14 border-r-4 border-dashed">
+                    <h1 class="text-4xl font-extrabold ">20% OFF</h1>
+                    <p class="text-xl font-semibold">on your next purchase</p>
+                    <p class="text-[rgba(3, 7, 18, 0.50)] font-medium text-lg">use by January 2024</p>
+                   </div>
+                   <div class="flex-1 p-16">
+                    <h3 class="text-3xl font-bold">Couple 20</h3>
+                    <p class="font-medium text-xl text-[rgba(3, 7, 18, 0.40)]">Coupon Code</p>
+                   </div> 
+                </div>
+            </div>
+            <button class="px-8 py-5 rounded-xl text-[#1DD100] font-bold text-xl border-2 border-[#1DD100] bg-none mb-32">See All Offers</button>
+        </section>
+    </header>
+    <main class="bg-[#F7F8F8] rounded-t-[88px] border-t-2 border-[#1DD100]">
+        <div>
+            <h2 class="">P.H travels</h2>
+        </div>
+        <section>
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="sciprts/p-travels.js"></script>
+</body>
+
+</html>
