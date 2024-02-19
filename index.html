@@ -259,8 +259,10 @@
                         <p class="font-medium">Class</p>
                         <p class="font-medium">Price</p>
                     </div>
-                    <div class="py-8 border-b-2">
-                        <p>append div</p>
+                    <div  class="grid grid-cols-3 pl-28 justify-between py-8 border-b-2">
+                        <div id="add-section"></div>
+                        <div id="economy-section" class="pl-6"></div>
+                        <div id="money-section" class="pl-14"></div>
                     </div>
                     <div class="flex justify-between">
                         <p class="font-medium">Total Price</p>
@@ -268,7 +270,7 @@
                     </div>
                     <div class="bg-white mx-6 rounded-2xl px-4 my-8">
                         <input class="pr-80 py-7" type="text" placeholder="Have any coupon?"><button
-                            class="btn bg-[#1DD100] text-white">Apply</button>
+                            class="btn bg-[#1DD100] text-white" id="coupon-button">Apply</button>
                     </div>
                     <div class="flex justify-between">
                         <p class="font-medium">Grand Price</p>
@@ -282,7 +284,7 @@
                     <input class="p-6 pr-[460px] border rounded-xl" type="number" placeholder="Enter your phone number">
                     <h4 class="font-semibold my-6">Email ID</h4>
                     <input class="p-6 pr-[460px] border rounded-xl" type="email" placeholder="Enter your email">
-                    <button class="mt-6 text-xl font-extrabold btn bg-[#1DD100] text-white px-[330px]">Next</button>
+                    <button disabled id="next-button" class="mt-6 text-xl font-extrabold btn bg-[#1DD100] text-white px-[330px] ">Next</button>
                     <div class="flex justify-around mt-4">
                         <p class="border-b-2 font-normal text-[rgba(3, 7, 18, 0.60)]">Terms and Conditions</p>
                         <p class="border-b-2 font-normal text-[rgba(3, 7, 18, 0.60)]">Cancellation Policy</p>
