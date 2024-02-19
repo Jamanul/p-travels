@@ -6,6 +6,9 @@ for (let i = 0; i < tickets.length; i++) {
     ticketNumber = 0;
     ticketArray =[];
     ticket.addEventListener('click', function (event) {
+        const ticketName = ticket.innerText;
+            ticketArray.push(ticketName);
+            console.log(ticketArray);
         //console.log('click')
         ticketNumber++;
         if(ticketNumber==4){
@@ -56,11 +59,6 @@ for (let i = 0; i < tickets.length; i++) {
             moneyDetails.innerText = '550 TK'
             moneySection.appendChild(moneyDetails);
             //check same ticket
-            ticketArray.push(ticketName)
-            console.log(ticketArray)
-            for(const element of ticketArray){
-                
-            } 
         }
         else{
             alert('Life is beautiful but getting the full bus for yourself is not.')
