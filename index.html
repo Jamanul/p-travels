@@ -13,7 +13,7 @@
 </head>
 
 <body class="font-inter">
-    <header class="mx-36">
+    <header id="hide-section2" class="mx-36">
         <section>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -112,7 +112,7 @@
                 All Offers</button>
         </section>
     </header>
-    <main class="bg-[#F7F8F8] rounded-t-[88px] border-t-2 border-[#1DD100]">
+    <main id="hide-section" class="bg-[#F7F8F8] rounded-t-[88px] border-t-2 border-[#1DD100] ">
         <div class="text-center pt-32 space-y-2 pb-6">
             <h2 class="text-5xl font-bold">P.H travels</h2>
             <p class="font-normal text-lg text-[rgba(3, 7, 18, 0.60)]">Yes, you can run unit tests and view the results
@@ -284,7 +284,7 @@
                     <input class="p-6 pr-[460px] border rounded-xl" type="number" placeholder="Enter your phone number">
                     <h4 class="font-semibold my-6">Email ID</h4>
                     <input class="p-6 pr-[460px] border rounded-xl" type="email" placeholder="Enter your email">
-                    <button disabled id="next-button" class="mt-6 text-xl font-extrabold btn bg-[#1DD100] text-white px-[330px] ">Next</button>
+                    <button disabled onclick="showNextSection()" id="next-button" class="mt-6 text-xl font-extrabold btn bg-[#1DD100] text-white px-[330px] ">Next</button>
                     <div class="flex justify-around mt-4">
                         <p class="border-b-2 font-normal text-[rgba(3, 7, 18, 0.60)]">Terms and Conditions</p>
                         <p class="border-b-2 font-normal text-[rgba(3, 7, 18, 0.60)]">Cancellation Policy</p>
@@ -293,9 +293,45 @@
             </div>
 
         </section>
+        
     </main>
-    <footer>
-
+        <section id="thank-you" class="bg-[#F2F1F1] text-center flex flex-col justify-center items-center min-h-screen hidden">
+            <div class="bg-white p-10 space-y-6 m-20">
+                <img class="mx-auto" src="images/success.png" alt="">
+                <h3 class="text-[#27AE60]">SUCCESS</h3>
+                <h3 class="font-medium text-xl text-[#4A4A4A]">Thank you for Booking Our Bus Seats. 
+                    We are working hard to find the best service and deals for you</h3>
+                <h3 class="font-light text-xl text-[#4A4A4A]">Shortly you will find a confirmation in your email.</h3>
+                <button class="btn bg-[#27AE60] text-white" onclick="showPreviousSection()">Continue</button>
+            </div>
+        </section>
+    <footer id="hide-section1" class="bg-black text-white p-32">
+        <div class="flex justify-between pb-12">
+            <div>
+                <h3 class="font-extrabold text-3xl">P-ticket</h3>
+                <h3 class="text-lg font-normal">P-Ticket is a digital platform to make your <br> daily commuting better.</h3>
+            </div>
+            <div>
+                <h3 class="font-bold text-xl">Download our app</h3>
+                <div class="flex items-center border p-1 rounded-md">
+                    <div><img src="images/playstore.png" alt=""></div>
+                    <div>
+                        <h3>Get in on </h3>
+                        <h3 class="text-xl font-bold">Google Play</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t-2 border-dashed pt-8 flex justify-between">
+            <div>
+                <h3>@all rights reserved, P-Ticket services limited.2024</h3>
+            </div>
+            <div class="flex justify-between gap-6">
+                <h3>Terms & condition</h3>
+                <h3>Return & refund policy</h3>
+                <h3>Privacy policy</h3>
+            </div>
+        </div>
     </footer>
     <script src="sciprts/utility.js"></script>
     <script src="sciprts/p-travels.js"></script>

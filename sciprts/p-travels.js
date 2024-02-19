@@ -56,7 +56,11 @@ for (let i = 0; i < tickets.length; i++) {
             moneyDetails.innerText = '550 TK'
             moneySection.appendChild(moneyDetails);
             //check same ticket
-            ticketArray.push(ticketName) 
+            ticketArray.push(ticketName)
+            console.log(ticketArray)
+            for(const element of ticketArray){
+                
+            } 
         }
         else{
             alert('Life is beautiful but getting the full bus for yourself is not.')
@@ -94,3 +98,26 @@ document.getElementById('coupon-button').addEventListener('click',function(){
        couponSection.classList.add('hidden') 
     }
 })
+
+
+function showNextSection(){
+    const hideSection= document.getElementById('hide-section')
+    const hideSection1= document.getElementById('hide-section1')
+    const hideSection2= document.getElementById('hide-section2')
+    const nextSection= document.getElementById('thank-you')
+    hideSection.classList.add('hidden')
+    hideSection1.classList.add('hidden')
+    hideSection2.classList.add('hidden')
+    nextSection.classList.remove('hidden')
+}
+
+function showPreviousSection(){
+    const hideSection= document.getElementById('hide-section')
+    const hideSection1= document.getElementById('hide-section1')
+    const hideSection2= document.getElementById('hide-section2')
+    const nextSection= document.getElementById('thank-you')
+    hideSection.classList.remove('hidden')
+    hideSection1.classList.remove('hidden')
+    hideSection2.classList.remove('hidden')
+    nextSection.classList.add('hidden')
+}
