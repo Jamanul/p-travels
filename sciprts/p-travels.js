@@ -4,9 +4,13 @@ for (let i = 0; i < tickets.length; i++) {
     const ticket = tickets[i];
     //console.log(ticket)
     ticketNumber = 0;
+    ticketArray =[];
     ticket.addEventListener('click', function (event) {
         //console.log('click')
         ticketNumber++;
+        if(ticketNumber==4){
+            document.getElementById('coupon-button').disabled=false;
+        }
         if (ticketNumber <= 4) {
             //color change
             document.getElementById('next-button').disabled =false;
@@ -27,14 +31,14 @@ for (let i = 0; i < tickets.length; i++) {
             //price increase
             const totalPrice = document.getElementById('total-price')
             const totalPriceInside = totalPrice.innerText;
-            const totalPriceNumber = parseInt(totalPriceInside);
+            const totalPriceNumber = parseFloat(totalPriceInside);
             const newTotalPrice = totalPriceNumber + 550;
             totalPrice.innerText = newTotalPrice;
             //grand increase
             const grandPrice = document.getElementById('grand-price')
             const grandPriceInside = grandPrice.innerText;
             const grandPriceNumber = parseFloat(grandPriceInside);
-            const newGrandPrice = grandPriceNumber + 550;
+            let newGrandPrice = grandPriceNumber + 550;
             grandPrice.innerText = newGrandPrice;
             // append time
             const addSection= document.getElementById('add-section')
@@ -51,6 +55,8 @@ for (let i = 0; i < tickets.length; i++) {
             const moneyDetails =document.createElement('p')
             moneyDetails.innerText = '550 TK'
             moneySection.appendChild(moneyDetails);
+            //check same ticket
+            ticketArray.push(ticketName) 
         }
         else{
             alert('Life is beautiful but getting the full bus for yourself is not.')
@@ -59,6 +65,32 @@ for (let i = 0; i < tickets.length; i++) {
     })
 }
 
-document.getElementById('coupon-button').addEventListener('click',function(){
-    console.log('')
+document.getElementById('coupon-button').addEventListener('click',function(){   
+    const couponInput= document.getElementById('coupon-input')
+    const couponInputValue = couponInput.value
+    const couponNew15 = couponInputValue.toLowerCase()
+    const couponCouple= couponInputValue.split(' ').join('').toLowerCase()
+    if(couponNew15==='new15'){
+        const nowTotalPrice =document.getElementById('total-price');
+        const nowTotalPrice1 =nowTotalPrice.innerText;
+        const nowTotalPrice2 = parseFloat(nowTotalPrice1);
+       const discountPrice = nowTotalPrice2 * 0.15;
+       console.log(discountPrice)
+       const discountGrantPrice = nowTotalPrice2-discountPrice.toFixed(2);
+       const nowGrandPrice = document.getElementById('grand-price')
+       nowGrandPrice.innerText =discountGrantPrice;
+       const couponSection = document.getElementById('coupon-section')
+       couponSection.classList.add('hidden') 
+    }
+    else if(couponCouple === 'couple20'){
+        const nowTotalPrice =document.getElementById('total-price');
+        const nowTotalPrice1 =nowTotalPrice.innerText;
+        const nowTotalPrice2 = parseFloat(nowTotalPrice1);
+       const discountPrice = nowTotalPrice2 * 0.20;
+       const discountGrantPrice = nowTotalPrice2-discountPrice.toFixed(2);
+       const nowGrandPrice = document.getElementById('grand-price')
+       nowGrandPrice.innerText =discountGrantPrice;
+       const couponSection = document.getElementById('coupon-section')
+       couponSection.classList.add('hidden') 
+    }
 })
